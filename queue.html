@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Queue Status – SmartCare Hospital System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="header-logo">🏥</div>
+      <div class="header-text">
+        <h1>SmartCare Hospital System</h1>
+        <p><strong>Jwaneng, Southern District, Botswana</strong> &nbsp;|&nbsp; Serving Our Community Since 1982</p>
+      </div>
+      <div class="header-emergency">🚨 Emergency<br><strong>997</strong></div>
+    </div>
+  </header>
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <button class="nav-toggle" id="nav-toggle" aria-controls="nav-list" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <ul id="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="book.html">Book Appointment</a></li>
+        <li><a href="queue.html">Queue Status</a></li>
+        <li><a href="departments.html">Departments</a></li>
+        <li><a href="account.html">My Account</a></li>
+        <li><a href="emergency.html" class="nav-emergency">🚨 Emergency</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="page-wrapper">
+    <section class="page-hero">
+      <h2>📊 Live Queue Status</h2>
+      <p>Updated in real time. Check your token and wait to be called. <span id="live-clock" style="font-weight:700"></span></p>
+    </section>
+    <div class="content-full">
+      <div class="card fade-in fade-in-1">
+        <h2>Queue Summary – Today</h2>
+        <div class="table-wrap">
+          <table>
+            <caption>All Departments – Current Queue</caption>
+            <thead><tr><th>Department</th><th>Serving Now</th><th>In Queue</th><th>Est. Wait</th></tr></thead>
+            <tbody>
+              <tr><td>General Medicine (OPD)</td><td>Q-061</td><td>12</td><td>~25 min</td></tr>
+              <tr><td>Maternity &amp; OB/GYN</td><td>M-018</td><td>5</td><td>~15 min</td></tr>
+              <tr><td>Paediatrics</td><td>P-012</td><td>7</td><td>~18 min</td></tr>
+              <tr><td>Dental</td><td>D-007</td><td>3</td><td>~10 min</td></tr>
+              <tr><td>Radiology &amp; Imaging</td><td>R-004</td><td>4</td><td>~20 min</td></tr>
+              <tr><td>Pharmacy</td><td>PH-033</td><td>9</td><td>~12 min</td></tr>
+              <tr><td>HIV/AIDS &amp; Wellness</td><td>H-009</td><td>6</td><td>~15 min</td></tr>
+              <tr><td>Physiotherapy</td><td>PT-003</td><td>2</td><td>~8 min</td></tr>
+              <tr><td>Casualty &amp; Trauma</td><td><span class="status status-open">OPEN 24/7</span></td><td>N/A</td><td>Immediate triage</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card fade-in fade-in-2">
+        <h2>General OPD – Detailed Queue</h2>
+        <div class="table-wrap">
+          <table>
+            <caption>OPD General Medicine – Token List</caption>
+            <thead><tr><th>Token No.</th><th>Patient Name</th><th>Department</th><th>Check-in</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Q-061</strong></td><td>T. Mothibi</td><td>General OPD</td><td>08:45</td><td><span class="status status-serving">Serving Now</span></td></tr>
+              <tr><td><strong>Q-062</strong></td><td>K. Molosiwa</td><td>General OPD</td><td>09:00</td><td><span class="status status-called">Called</span></td></tr>
+              <tr><td><strong>Q-063</strong></td><td>B. Segaetsho</td><td>General OPD</td><td>09:15</td><td><span class="status status-waiting">Waiting</span></td></tr>
+              <tr><td><strong>Q-064</strong></td><td>O. Kebonye</td><td>General OPD</td><td>09:22</td><td><span class="status status-waiting">Waiting</span></td></tr>
+              <tr><td><strong>Q-065</strong></td><td>N. Basimanebotlhe</td><td>General OPD</td><td>09:30</td><td><span class="status status-waiting">Waiting</span></td></tr>
+              <tr><td><strong>Q-066</strong></td><td>G. Kgari</td><td>General OPD</td><td>09:45</td><td><span class="status status-waiting">Waiting</span></td></tr>
+              <tr><td><strong>P-012</strong></td><td>L. Dikgole</td><td>Paediatrics</td><td>09:10</td><td><span class="status status-serving">Serving Now</span></td></tr>
+              <tr><td><strong>D-007</strong></td><td>M. Gabanakgosi</td><td>Dental</td><td>09:05</td><td><span class="status status-called">Called</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card fade-in fade-in-3">
+        <h2>🔍 Check Your Token</h2>
+        <p style="margin-bottom:16px">Enter your token number to see your queue position and estimated wait time.</p>
+        <form id="token-form" novalidate>
+          <div class="form-group" style="display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end">
+            <div style="flex:1;min-width:200px">
+              <label for="token-input">Token Number</label>
+              <input type="text" id="token-input" name="token" placeholder="e.g. Q-063" required>
+            </div>
+            <button type="submit" class="btn btn-primary">🔍 Check Status</button>
+          </div>
+        </form>
+        <div class="token-result" id="token-result" role="status" aria-live="polite"></div>
+      </div>
+      <div class="card fade-in fade-in-4">
+        <h3>Important Notes</h3>
+        <ul>
+          <li>Please remain in the waiting area when your token is close to being called.</li>
+          <li>If you miss your call, report to the reception desk immediately.</li>
+          <li>Casualty and Trauma cases are handled by priority – triage applies.</li>
+          <li>For emergencies, do not wait in queue – go directly to Casualty.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col"><h4>🏥 SmartCare Hospital</h4><p>Plot 1427, Hospital Way<br>Jwaneng, Southern District, Botswana</p></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="book.html">Book Appointment</a></li><li><a href="departments.html">Departments</a></li><li><a href="emergency.html">Emergency</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><p>📞 +267 388 0333<br>✉️ info@smartcare.bw</p></div>
+    </div>
+    <div class="footer-bottom">
+      <span>Facility Code: HF-SB-0042</span>
+      <span>&copy; 2025 SmartCare Hospital System. All rights reserved.</span>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

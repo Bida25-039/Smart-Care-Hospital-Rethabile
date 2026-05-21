@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account – SmartCare Hospital System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="header-logo">🏥</div>
+      <div class="header-text">
+        <h1>SmartCare Hospital System</h1>
+        <p><strong>Jwaneng, Southern District, Botswana</strong> &nbsp;|&nbsp; Serving Our Community Since 1982</p>
+      </div>
+      <div class="header-emergency">🚨 Emergency<br><strong>997</strong></div>
+    </div>
+  </header>
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <button class="nav-toggle" id="nav-toggle" aria-controls="nav-list" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <ul id="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="book.html">Book Appointment</a></li>
+        <li><a href="queue.html">Queue Status</a></li>
+        <li><a href="departments.html">Departments</a></li>
+        <li><a href="account.html">My Account</a></li>
+        <li><a href="emergency.html" class="nav-emergency">🚨 Emergency</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="page-wrapper">
+    <section class="page-hero">
+      <h2>👤 My Account</h2>
+      <p>View your patient profile, upcoming appointments, visit history and notifications.</p>
+    </section>
+    <div class="content-full">
+      <div class="card fade-in fade-in-1">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:16px">
+          <h2 style="margin-bottom:0;border:none;padding:0">Patient Profile</h2>
+          <button class="btn btn-outline btn-sm" id="edit-btn">✏️ Edit My Details</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <caption>Personal Information on File</caption>
+            <thead><tr><th>Field</th><th>Details</th></tr></thead>
+            <tbody>
+              <tr><td>Full Name</td><td><strong>Keabetswe Mokobi</strong></td></tr>
+              <tr><td>OMANG / ID Number</td><td>564312789</td></tr>
+              <tr><td>Date of Birth</td><td>14 March 1990</td></tr>
+              <tr><td>Gender</td><td>Female</td></tr>
+              <tr><td>Mobile Number</td><td>+267 76 123 456</td></tr>
+              <tr><td>Town / Village</td><td>Jwaneng</td></tr>
+              <tr><td>Medical Aid</td><td>Debswana Medical Aid</td></tr>
+              <tr><td>Medical Aid Number</td><td>DEB-078-2021</td></tr>
+              <tr><td>Blood Group</td><td>O+</td></tr>
+              <tr><td>Known Allergies</td><td><span style="color:var(--danger);font-weight:700">⚠️ Penicillin</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="edit-form" style="display:none;margin-top:24px">
+          <form data-submit="toast-account" novalidate>
+            <fieldset>
+              <legend>Edit Personal Information</legend>
+              <div class="form-group"><label for="fullname">Full Name</label><input type="text" id="fullname" name="fullname" value="Keabetswe Mokobi"></div>
+              <div class="form-group"><label for="phone">Mobile Number</label><input type="tel" id="phone" name="phone" value="+267 76 123 456"></div>
+              <div class="form-group"><label for="town">Town / Village</label><input type="text" id="town" name="town" value="Jwaneng"></div>
+              <div class="form-group">
+                <label for="medical-aid">Medical Aid</label>
+                <select id="medical-aid" name="medical-aid">
+                  <option value="bpomas">BPOMAS</option>
+                  <option value="pula">PULA Medical Aid</option>
+                  <option value="bdf">BDF (Military)</option>
+                  <option value="debswana" selected>Debswana Medical Aid</option>
+                  <option value="cash">Self-Pay (Cash)</option>
+                  <option value="govt">Government (Free)</option>
+                </select>
+              </div>
+              <div class="form-group"><label for="aid-num">Medical Aid Number</label><input type="text" id="aid-num" name="aid-num" value="DEB-078-2021"></div>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">💾 Save Changes</button>
+                <button type="reset" class="btn btn-outline">🔄 Reset</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      <div class="card fade-in fade-in-2">
+        <h2>Upcoming Appointments</h2>
+        <div class="table-wrap">
+          <table>
+            <caption>Scheduled Appointments</caption>
+            <thead><tr><th>Date</th><th>Time</th><th>Department</th><th>Doctor</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>28 April 2025</td><td>09:00</td><td>General OPD</td><td>Dr. L. Seretse</td><td><span class="status status-confirmed">Confirmed</span></td></tr>
+              <tr><td>05 May 2025</td><td>10:30</td><td>Physiotherapy</td><td>Mr. T. Nkwe</td><td><span class="status status-pending">Pending</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card fade-in fade-in-3">
+        <h2>Recent Visit History</h2>
+        <div class="table-wrap">
+          <table>
+            <caption>Previous Visits</caption>
+            <thead><tr><th>Date</th><th>Department</th><th>Doctor</th><th>Diagnosis / Reason</th></tr></thead>
+            <tbody>
+              <tr><td>10 March 2025</td><td>General OPD</td><td>Dr. L. Seretse</td><td>Upper respiratory tract infection</td></tr>
+              <tr><td>22 January 2025</td><td>Dental</td><td>Dr. P. Gaefele</td><td>Routine dental check-up</td></tr>
+              <tr><td>08 November 2024</td><td>Radiology</td><td>Dr. B. Mogami</td><td>Chest X-ray</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card fade-in fade-in-4">
+        <h2>Notifications</h2>
+        <ul class="notif-list">
+          <li>🔔 <span><strong>Reminder:</strong> Appointment on 28 April 2025 at 09:00 – General OPD</span></li>
+          <li>📋 <span><strong>Lab Results:</strong> Your results from 10 March are ready. Visit the lab counter to collect.</span></li>
+          <li>💊 <span><strong>Prescription Refill:</strong> Your chronic medication is due for renewal in 7 days.</span></li>
+        </ul>
+      </div>
+      <div class="card fade-in">
+        <h3>Quick Account Actions</h3>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+          <a href="book.html" class="btn btn-primary">📅 Book a New Appointment</a>
+          <a href="queue.html" class="btn btn-outline">📊 Check Queue Status</a>
+          <a href="contact.html" class="btn btn-outline">✉️ Contact the Hospital</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="toast" id="toast-account" role="status" aria-live="polite">✅ Your details have been saved successfully.</div>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col"><h4>🏥 SmartCare Hospital</h4><p>Plot 1427, Hospital Way<br>Jwaneng, Southern District, Botswana</p></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="book.html">Book Appointment</a></li><li><a href="queue.html">Queue Status</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><p>📞 +267 388 0333<br>✉️ info@smartcare.bw</p></div>
+    </div>
+    <div class="footer-bottom">
+      <span>Facility Code: HF-SB-0042</span>
+      <span>&copy; 2025 SmartCare Hospital System. All rights reserved.</span>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

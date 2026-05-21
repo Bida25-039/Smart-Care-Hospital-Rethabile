@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment – SmartCare Hospital System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="header-logo">🏥</div>
+      <div class="header-text">
+        <h1>SmartCare Hospital System</h1>
+        <p><strong>Jwaneng, Southern District, Botswana</strong> &nbsp;|&nbsp; Serving Our Community Since 1982</p>
+      </div>
+      <div class="header-emergency">🚨 Emergency<br><strong>997</strong></div>
+    </div>
+  </header>
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <button class="nav-toggle" id="nav-toggle" aria-controls="nav-list" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <ul id="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="book.html">Book Appointment</a></li>
+        <li><a href="queue.html">Queue Status</a></li>
+        <li><a href="departments.html">Departments</a></li>
+        <li><a href="account.html">My Account</a></li>
+        <li><a href="emergency.html" class="nav-emergency">🚨 Emergency</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="page-wrapper">
+    <section class="page-hero">
+      <h2>📅 Book an Appointment</h2>
+      <p>Complete the form below to schedule your visit at SmartCare Hospital System.</p>
+    </section>
+    <div class="content-full">
+      <div class="alert alert-info fade-in">
+        <span>ℹ️</span>
+        <div>Please bring your <strong>OMANG (National ID)</strong> or Passport, and your medical aid card on the day of your visit.</div>
+      </div>
+      <div class="card fade-in fade-in-1">
+        <h2>Appointment Booking Form</h2>
+        <form id="booking-form" data-submit="toast-booking" novalidate>
+          <fieldset>
+            <legend>Step 1 – Select Hospital &amp; Department</legend>
+            <div class="form-group">
+              <label for="facility">Hospital / Facility <span style="color:var(--danger)">*</span></label>
+              <select id="facility" name="facility" required>
+                <option value="">-- Choose Facility --</option>
+                <option value="jwaneng-main">SmartCare Hospital – Jwaneng Main</option>
+                <option value="jwaneng-west">SmartCare Clinic – Jwaneng West</option>
+                <option value="sekoma">SmartCare Satellite Clinic – Sekoma</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="department">Department <span style="color:var(--danger)">*</span></label>
+              <select id="department" name="department" required>
+                <option value="">-- Choose Department --</option>
+                <option value="general">General Medicine (OPD)</option>
+                <option value="maternity">Maternity &amp; OB/GYN</option>
+                <option value="paediatrics">Paediatrics</option>
+                <option value="casualty">Casualty &amp; Trauma</option>
+                <option value="dental">Dental</option>
+                <option value="radiology">Radiology &amp; Imaging</option>
+                <option value="pharmacy">Pharmacy</option>
+                <option value="hiv">HIV/AIDS &amp; Wellness</option>
+                <option value="physio">Physiotherapy</option>
+              </select>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Step 2 – Patient Details</legend>
+            <div class="form-group">
+              <label for="fullname">Full Name (as per OMANG) <span style="color:var(--danger)">*</span></label>
+              <input type="text" id="fullname" name="fullname" placeholder="e.g. Keabetswe Mokobi" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="omang">OMANG / National ID Number <span style="color:var(--danger)">*</span></label>
+              <input type="text" id="omang" name="omang" placeholder="9-digit national ID" maxlength="9" pattern="\d{9}" required>
+            </div>
+            <div class="form-group">
+              <label for="dob">Date of Birth <span style="color:var(--danger)">*</span></label>
+              <input type="date" id="dob" name="dob" required autocomplete="bday">
+            </div>
+            <div class="form-group">
+              <label for="gender">Gender <span style="color:var(--danger)">*</span></label>
+              <select id="gender" name="gender" required>
+                <option value="">-- Select --</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Prefer not to say</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="phone">Mobile Number (Botswana) <span style="color:var(--danger)">*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="+267 7X XXX XXX" required autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label for="medical-aid">Medical Aid / Payment Method <span style="color:var(--danger)">*</span></label>
+              <select id="medical-aid" name="medical-aid" required>
+                <option value="">-- Select --</option>
+                <option value="bpomas">BPOMAS</option>
+                <option value="pula">PULA Medical Aid</option>
+                <option value="bdf">BDF (Military)</option>
+                <option value="debswana">Debswana Medical Aid</option>
+                <option value="cash">Self-Pay (Cash)</option>
+                <option value="govt">Government (Free / Subsidised)</option>
+              </select>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Step 3 – Choose Date &amp; Time</legend>
+            <div class="form-group">
+              <label for="appt-date">Preferred Appointment Date <span style="color:var(--danger)">*</span></label>
+              <input type="date" id="appt-date" name="appt-date" data-min-today required>
+            </div>
+            <div class="form-group">
+              <label for="appt-time">Preferred Time Slot <span style="color:var(--danger)">*</span></label>
+              <select id="appt-time" name="appt-time" required>
+                <option value="">-- Select Time --</option>
+                <option value="0730">07:30 – 08:00</option>
+                <option value="0800">08:00 – 08:30</option>
+                <option value="0830">08:30 – 09:00</option>
+                <option value="0900">09:00 – 09:30</option>
+                <option value="1000">10:00 – 10:30</option>
+                <option value="1100">11:00 – 11:30</option>
+                <option value="1400">14:00 – 14:30</option>
+                <option value="1500">15:00 – 15:30</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="reason">Reason for Visit / Symptoms</label>
+              <textarea id="reason" name="reason" placeholder="Briefly describe your symptoms..."></textarea>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Step 4 – Confirm Booking</legend>
+            <p style="font-size:.9rem;margin-bottom:14px">By submitting you confirm that your details are correct. An SMS confirmation will be sent to your mobile number.</p>
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="consent" name="consent" required>
+              <label for="consent" style="font-weight:600">I confirm my details are correct and I consent to treatment at SmartCare Hospital System.</label>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">✅ Confirm Booking</button>
+              <button type="reset" class="btn btn-outline">🔄 Clear Form</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div class="card fade-in fade-in-2">
+        <h3>What to Bring on Your Visit</h3>
+        <ul>
+          <li>Valid OMANG (National ID) or Passport</li>
+          <li>Medical aid card (if applicable)</li>
+          <li>Referral letter (if coming from another clinic)</li>
+          <li>Any current medication or prescription</li>
+          <li>Appointment confirmation SMS</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="toast" id="toast-booking" role="status" aria-live="polite">✅ Appointment booked! An SMS confirmation will be sent shortly.</div>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col"><h4>🏥 SmartCare Hospital</h4><p>Plot 1427, Hospital Way<br>Jwaneng, Southern District, Botswana</p></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="queue.html">Queue Status</a></li><li><a href="departments.html">Departments</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+      <div class="footer-col"><h4>Appointments</h4><p>📞 +267 388 0350<br>✉️ appointments@smartcare.bw</p></div>
+    </div>
+    <div class="footer-bottom">
+      <span>Facility Code: HF-SB-0042</span>
+      <span>&copy; 2025 SmartCare Hospital System. All rights reserved.</span>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

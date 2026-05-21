@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartCare Hospital System – Jwaneng, Botswana</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="header-logo">🏥</div>
+      <div class="header-text">
+        <h1>SmartCare Hospital System</h1>
+        <p><strong>Jwaneng, Southern District, Botswana</strong> &nbsp;|&nbsp; Serving Our Community Since 1982</p>
+      </div>
+      <div class="header-emergency">🚨 Emergency<br><strong>997</strong></div>
+    </div>
+  </header>
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <button class="nav-toggle" id="nav-toggle" aria-controls="nav-list" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="book.html">Book Appointment</a></li>
+        <li><a href="queue.html">Queue Status</a></li>
+        <li><a href="departments.html">Departments</a></li>
+        <li><a href="account.html">My Account</a></li>
+        <li><a href="emergency.html" class="nav-emergency">🚨 Emergency</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="page-wrapper">
+    <section class="page-hero">
+      <h2>Welcome to SmartCare Hospital System</h2>
+      <p>Quality, accessible, and compassionate healthcare for Jwaneng and the Southern District.</p>
+      <div class="hero-actions">
+        <a href="book.html" class="btn btn-accent">📅 Book Appointment</a>
+        <a href="queue.html" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.6)">👁 Queue Status</a>
+        <a href="emergency.html" class="btn btn-danger">🚨 Emergency</a>
+      </div>
+    </section>
+    <div class="content-grid">
+      <aside>
+        <div class="sidebar-card fade-in fade-in-1">
+          <div class="sidebar-card-header">🏨 Departments</div>
+          <ul>
+            <li><a href="departments.html">🩺 General Medicine (OPD)</a></li>
+            <li><a href="departments.html">🤰 Maternity &amp; OB/GYN</a></li>
+            <li><a href="departments.html">👶 Paediatrics</a></li>
+            <li><a href="departments.html">🚑 Casualty &amp; Trauma</a></li>
+            <li><a href="departments.html">🦷 Dental</a></li>
+            <li><a href="departments.html">🔬 Radiology</a></li>
+            <li><a href="departments.html">💊 Pharmacy</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-card fade-in fade-in-2">
+          <div class="sidebar-card-header">🚨 Emergency Numbers</div>
+          <ul class="info-list">
+            <li>🚑 Ambulance <strong>997</strong></li>
+            <li>🔥 Fire <strong>998</strong></li>
+            <li>👮 Police <strong>999</strong></li>
+            <li>🏥 Hospital <strong>+267 388 0333</strong></li>
+          </ul>
+        </div>
+        <div class="sidebar-card fade-in fade-in-3">
+          <div class="sidebar-card-header">🔔 Notifications</div>
+          <ul class="info-list">
+            <li>Appointment Reminder <span class="notif-badge">2</span></li>
+            <li>Queue Update <span class="notif-badge">1</span></li>
+          </ul>
+        </div>
+      </aside>
+      <main>
+        <div class="card fade-in fade-in-1">
+          <h2>Today at a Glance</h2>
+          <p>Live hospital statistics. <span id="live-clock" style="font-weight:700;color:var(--primary)"></span></p>
+          <div class="stats-grid">
+            <div class="stat-card"><div class="stat-value">143</div><div class="stat-label">Patients Seen Today</div></div>
+            <div class="stat-card"><div class="stat-value">18</div><div class="stat-label">In Queue (OPD)</div></div>
+            <div class="stat-card"><div class="stat-value">~22<small style="font-size:1rem">min</small></div><div class="stat-label">Avg. Wait Time</div></div>
+            <div class="stat-card"><div class="stat-value">9</div><div class="stat-label">Doctors On Duty</div></div>
+            <div class="stat-card"><div class="stat-value">Q-061</div><div class="stat-label">Token Serving Now</div></div>
+          </div>
+        </div>
+        <div class="card fade-in fade-in-2">
+          <h2>Our Services</h2>
+          <ul>
+            <li>General Outpatient Department (OPD)</li>
+            <li>Maternity &amp; Obstetrics</li>
+            <li>Paediatric Care</li>
+            <li>Dental Services</li>
+            <li>Radiology &amp; Imaging</li>
+            <li>HIV/AIDS Testing &amp; Wellness</li>
+            <li>Physiotherapy</li>
+            <li>24-Hour Casualty &amp; Trauma</li>
+          </ul>
+        </div>
+        <div class="card fade-in fade-in-3">
+          <h2>Operating Hours</h2>
+          <div class="table-wrap">
+            <table>
+              <caption>SmartCare – Jwaneng Operating Hours</caption>
+              <thead><tr><th>Department</th><th>Days</th><th>Hours</th></tr></thead>
+              <tbody>
+                <tr><td>OPD (General)</td><td>Mon – Fri</td><td>07:30 – 16:30</td></tr>
+                <tr><td>OPD (General)</td><td>Saturday</td><td>07:30 – 13:00</td></tr>
+                <tr><td>Casualty &amp; Trauma</td><td>7 Days</td><td>24 Hours</td></tr>
+                <tr><td>Pharmacy</td><td>Mon – Fri</td><td>08:00 – 18:00</td></tr>
+                <tr><td>Dental</td><td>Mon – Fri</td><td>08:00 – 16:00</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="alert alert-info fade-in fade-in-4">
+          <span>ℹ️</span>
+          <div>All patients must bring a valid <strong>OMANG (National ID)</strong> or Passport. Medical aid cards must be presented at registration.</div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col"><h4>🏥 SmartCare Hospital</h4><p>Plot 1427, Hospital Way<br>Jwaneng, Southern District<br>Botswana</p></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="book.html">Book Appointment</a></li><li><a href="queue.html">Queue Status</a></li><li><a href="departments.html">Departments</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><p>📞 +267 388 0333<br>✉️ info@smartcare.bw<br>🚨 Emergency: <strong style="color:#e74c3c">997</strong></p></div>
+    </div>
+    <div class="footer-bottom">
+      <span>Registered with the Ministry of Health &amp; Wellness, Botswana</span>
+      <span>&copy; 2025 SmartCare Hospital System. All rights reserved.</span>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
